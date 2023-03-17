@@ -47,7 +47,6 @@ describe("voucher service test suite", () => {
             return undefined;
         });
         const promise = voucherService.applyVoucher(voucher.code, value);
-        //expect(promise).rejects.toBeInstanceOf(Error);
         expect(promise).rejects.toEqual({
             message: "Voucher does not exist.",
             type: "conflict"
