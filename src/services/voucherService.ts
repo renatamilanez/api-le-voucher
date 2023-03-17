@@ -16,7 +16,7 @@ async function createVoucher(code: string, discount: number) {
     throw conflictError("Voucher already exist.");
   }
 
-  await voucherRepository.createVoucher(code, discount);
+  return await voucherRepository.createVoucher(code, discount);
 }
 
 async function applyVoucher(code: string, amount: number) {
